@@ -248,36 +248,36 @@ mean(c(64, 41, 41, 79, 13, 61, 5, 56, 54, 79, 25, 43, 80, 11, 68, 4, 75, 21, 87,
 
 # spawnDaysRange1        lastBday spawnDaysRange2 
 #             228             NaN             246 
-winter 292 to 168 gdd 235
+# winter 292 to 168 gdd 235
 
 # 2050
 
 # spawnDaysRange1        lastBday spawnDaysRange2 
 #             182             208             270 
-winter 291 to 121 gdd 181
+# winter 291 to 121 gdd 181
 
 # 2100
 
 # spawnDaysRange1        lastBday spawnDaysRange2 
 #             160             240             288 
-winter 311 to 102 gdd 160
+# winter 311 to 102 gdd 160
 
 # Vermillion
 
 # baseline
 # spawnDaysRange1        lastBday spawnDaysRange2 
 #             148             229             270 
-winter 306 to 103 gdd 152
+# winter 306 to 103 gdd 152
 
 # 2050
 # spawnDaysRange1        lastBday spawnDaysRange2 
 #             144             258             312 
-winter 321 to 80 gdd 143
+# winter 321 to 80 gdd 143
 
 # 2100
 # spawnDaysRange1        lastBday spawnDaysRange2 
 #             124             282             331 
-winter 343 to 44 gdd 123
+# winter 343 to 44 gdd 123
 
 # ---- Making the timeline plot ------------------------------------------------
 
@@ -471,7 +471,7 @@ fig1a <- ggplot(gddArray, aes(x = ordinal, height = temp, y = 0, fill = gdd)) + 
     #geom_vline(xintercept=get.spawning(gddArray[,1:2]) %>% tail(1), color = "white", linetype = "dotted", size=0.7) +
 
 
-ggsave(plot = fig1a, filename = "lifehist.png", path = "../ch2graphics", bg = "white", width = 6, height = 3, dpi = 600)
+#ggsave(plot = fig1a, filename = "lifehist.png", path = "../ch2graphics", bg = "white", width = 6, height = 3, dpi = 600)
      
 # consider this for fixing the color gradient issue
 
@@ -578,7 +578,7 @@ top.time <- ggplot(timeDat.o,aes(x=value,y=as.numeric(period), col=variable, lab
               color='black', hjust = 0, size = 3.5, family = "serif")
                         
     
-ggsave(plot = top.time, filename = "test.png", path = "../ch2graphics", bg = "white", width = 9, height = 3)
+#ggsave(plot = top.time, filename = "test.png", path = "../ch2graphics", bg = "white", width = 9, height = 3)
 
 
 # — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
@@ -712,13 +712,10 @@ all.time <- plot_grid(fig1a,
 )
 
 # save plot
-ggsave(plot = all.time, filename = "timelines.png", path = "../ch2graphics", bg = "white", width = 9, height = 5)
-
-
+ggsave(plot = all.time, filename = "timelines.png", path = "./graphics", bg = "white", width = 9, height = 5)
 
 
 # as EPS
-library("cairo")
-ggsave(plot = all.time, filename = "timelines.eps", path = "../ch2graphics", device = cairo_ps, bg = "white", width = 9, height = 6, fallback_resolution = 600)
+#ggsave(plot = all.time, filename = "timelines.eps", path = "../ch2graphics", device = cairo_ps, bg = "white", width = 9, height = 6, fallback_resolution = 600)
 
 

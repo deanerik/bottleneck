@@ -48,11 +48,11 @@
 
 #   Models selected                 |  Rank
 #   --------------------------------+-------
-#   CMIP6.MRI_ESM2_0.r1i1p1f1	    |    2
+#   CMIP6.MRI_ESM2_0.r1i1p1f1       |    2
 #   CMIP6.HadGEM3_GC31_MM.r1i1p1f3  |   30
-#   CMIP6.EC_Earth3_Veg.r1i1p1f1	|   32
-#   CMIP6.INM_CM5_0.r1i1p1f1	    |   49
-#   CMIP6.UKESM1_0_LL.r1i1p1f2	    |   64
+#   CMIP6.EC_Earth3_Veg.r1i1p1f     |   32
+#   CMIP6.INM_CM5_0.r1i1p1f1        |   49
+#   CMIP6.UKESM1_0_LL.r1i1p1f2      |   64
 
 #   80% variation captured for scenario ssp5: 85
 
