@@ -30,6 +30,33 @@ overwinter starvation. Over time, Bighead Carp may be released from this
 potential bottleneck at northern latitudes, which has implications for their
 potential invasion.
 
+Schematic
+--------------------------------------------------------------------------------
+
+********************************************************************************
+*                                     .-.                     .------.         *
+*                                   .-+   |                  / #  # /|         *
+*                               .--+       '--.             +------+/|         *
+*                              |  Server Cloud |<---------- |      +/|         *
+*                               '-------------'             |Ubuntu+/|         *
+*                                   ^      ^                |      +/          *
+*                    Internet       |      |                '------'           *
+*          .------------------------'      '-------------.                     *
+*          |                                             |                     *
+*          v                                             v                     *
+*     .--------.      WiFi     .--------.  Bluetooth  .-----.                  *
+*     |>       |<------------->|        |<---------->|       |                 *
+*     |        |               |  OS X  |            |  iOS  |                 *
+*     +--------+               +--------+            |       |                 *
+*    /// ____ \\\             /// ____ \\\           |   o   |                 *
+*   '------------'           '------------'           '-----'                  *
+*      Laptop 1                 Laptop 2              Tablet 1                 *
+*                                                                              *
+*                                                                              *
+*                                                                              *
+*                                                                              *
+*                                                                              *
+********************************************************************************
 
 Checklist
 --------------------------------------------------------------------------------
@@ -63,3 +90,9 @@ To do list
 - [ ] The `timelines.R` code for timeline plot needs to be cleaned up
 
 - [ ] The remaining content in the old model file needs to be extracted into `analyzeResults.R`
+
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+
+
+
