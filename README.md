@@ -1,5 +1,6 @@
 Overview
 ================================================================================
+
 This is a repository of the code and data used in one of my research projects
 that explores the first year of life for an invasive fish species, and whether
 changing environmental conditions across time and space may enable better
@@ -33,6 +34,9 @@ potential invasion.
 
 Process
 --------------------------------------------------------------------------------
+
+See erikdean.ca/bottleneck for schematic of process
+
 
 0. Check that you have all scripts listed below in the current working
    directory, and a `/data` subdirectory with the 4 baseline data sets.

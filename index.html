@@ -1,9 +1,10 @@
-         **Modelling overwinter survival – a population bottleneck?**
-                              Erik Dean 2023
+**Modelling overwinter survival:<br><small>Could climate change release Bighead Carp from a population bottleneck?</small>**
+                                 Erik Dean 
 
 Overview
 ================================================================================
-This is a repository of the code and data used in one of my research projects
+
+This is a $\text{repository}^†$ of the code and data used in one of my research projects
 that explores the first year of life for an invasive fish species, and whether
 changing environmental conditions across time and space may enable better
 performance (reproduction, growth, and survival) for them in four locations
@@ -33,8 +34,10 @@ overwinter starvation. Over time, Bighead Carp may be released from this
 potential bottleneck at northern latitudes, which has implications for their
 potential invasion.
 
+$†\space$<small>Visit repository at https://github.com/deanerik/bottleneck</small>
+
 Schematic
---------------------------------------------------------------------------------
+================================================================================
 
 ********************************************************************************
 *                 .-.                                                          *
@@ -43,7 +46,7 @@ Schematic
 *    .--> |   repository  | ---.                                               *
 *   |      '-------------'      |                                              *
 *   |                           |                  ┏━━━━━━┳━━━━━┳━━━━━━━┓      *
-*   |             ①             |       ②          ┃ Year ┃ Day ┃  TAS  ┃      *
+*   |             ①             |        ②         ┃ Year ┃ Day ┃  TAS  ┃      *
 *   '        acquireData.sh     |   accessData.R   ┡━━━━━━╇━━━━━╇━━━━━━━┩      *
 *  .------.                     v            .---> │ 2015 │  1  │ -15°C │ ---. *
 * /------/|                                 |      ├──────┼─────┼───────┤     |*
@@ -53,14 +56,14 @@ Schematic
 *|      +/                  +--------+             ├──────┼─────┼───────┤     |*
 *'------'                  //.::::::.\\            │ 2100 │ 365 │  -8°C │     |*
 *NEX-GDPP                 '------------'           └──────┴─────┴───────┘     |*
-*Database                    Computer               Climatic projections      |*
+*Database                    Computer                Climate projections      |*
 *                                                                             |*
 *                                                                             |*
 *                                                                             |*
 *                                                                             |*
 *      .------------------------.                  .------------.             |*
 *     |         /`-,_            |                |   ▲    .     |            |*
-*     |        ∕_,.._`:          |       ④        |   ┊  ./:.    |     ③      |*
+*     |        ∕_,.._`:          |        ④       |   ┊  ./:.    |      ③     |*
 *     |    ,.-'  ,   ``-:_,-')   |   seriesRun.R  |   ┊. /.      |  convert.R |*
 * .-- |   : 0 ):';       _  {    | <------------- |   ┊:/  .     | <---------' *
 *|    |    `-,_ `'__,.-''\`-.)   |   utilities.R  |   └'┄┄┄┄┄▶   |             *
@@ -79,18 +82,18 @@ Schematic
 *|     │ │ 2015 │  day 181  │ ⋯ │    33%   │    |  timelines.R   +------------+*
 *|     │ ├──────┼───────────┼   ┼──────────┤    |                              *
 * '--> ⎨ │ 2016 │  day 177  │ ⋯ │    32%   │ ---+                              *
-*      │ ├──────┼───────────┼   ┼──────────┤    |                              *
-*      │     ⋮        ⋮               ⋮         |                +------------+*
+*      │ ├──────┼───────────┼   ┼──────────┤    |       ⑥                      *
+*      │     ⋮        ⋮               ⋮         |  summarize.R   +------------+*
 *      │ ├──────┼───────────┼   ┼──────────┤     '-------------> | Summaries  |*
-*      ⎩ │ 2099 │  day 146  │ ⋯ │    80%   │       summarize.R   | of results |*
-*        └──────┴───────────┴   ┴──────────┘            ⑥        +------------+*
+*      ⎩ │ 2099 │  day 146  │ ⋯ │    80%   │                     | of results |*
+*        └──────┴───────────┴   ┴──────────┘                     +------------+*
 *         Results — annual outcomes for YOY                                    *
 *                                                                              *
 *                                                                              *                
 ********************************************************************************
 
 Process
---------------------------------------------------------------------------------
+================================================================================
 
 0. Check that you have all scripts listed below in the current working
    directory, and a `/data` subdirectory with the 4 baseline data sets.
@@ -116,7 +119,7 @@ Process
 
 
 To do list
---------------------------------------------------------------------------------
+================================================================================
 
 - [ ] add a process step for air to water temperature model `convert.R`
 
