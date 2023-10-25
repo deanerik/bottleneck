@@ -35,7 +35,7 @@ potential invasion.
 Process
 --------------------------------------------------------------------------------
 
-See erikdean.ca/bottleneck for schematic of process
+*See [erikdean.ca/bottleneck](https://erikdean.ca/bottleneck/) for schematic of process*
 
 
 0. Check that you have all scripts listed below in the current working
