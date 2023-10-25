@@ -1,0 +1,129 @@
+         **Modelling overwinter survival – a population bottleneck?**
+                              Erik Dean 2023
+
+Overview
+================================================================================
+This is a repository of the code and data used in one of my research projects
+that explores the first year of life for an invasive fish species, and whether
+changing environmental conditions across time and space may enable better
+performance (reproduction, growth, and survival) for them in four locations
+within the Great Lakes basin. 
+
+The purpose of this research is to explore the consequences of changing seasonal
+temperatures on the onset and duration of spawning, growth, and overwinter
+starvation, and whether young-of-year (age-0) Bighead Carp will be able to
+endure winter conditions in the future. 
+
+Environmental temperatures affect the rates at which fish grow, develop into
+spawning condition, and consume stored energy. Thus, daily temperature trends
+coming out of winter dictate when adult fish will begin reproducing and,
+subsequently, determine how much spawned offspring will be able grow before
+the start of winter. 
+
+Colder environmental conditions at northern latitudes have been
+theorized to limit the reproduction, growth, and body sizes of age-0 fish.
+By restricting fish from attaining sufficiently large body sizes,
+low temperatures can prevent overwinter survival, 
+thereby imposing a population bottleneck.
+
+Anticipated warming under climate change, however, may enable young-of-year fish
+to attain larger sizes and store greater amounts of energy. With greater amounts
+of stored energy, young-of-year fish will be able to endure longer periods of
+overwinter starvation. Over time, Bighead Carp may be released from this
+potential bottleneck at northern latitudes, which has implications for their
+potential invasion.
+
+Schematic
+--------------------------------------------------------------------------------
+
+********************************************************************************
+*                 .-.                                                          *
+*              .-+   |                                                         *
+*          .--+ Cloud '--.                                                     *
+*    .--> |   repository  | ---.                                               *
+*   |      '-------------'      |                                              *
+*   |                           |                  ┏━━━━━━┳━━━━━┳━━━━━━━┓      *
+*   |             ①             |       ②          ┃ Year ┃ Day ┃  TAS  ┃      *
+*   '        acquireData.sh     |   accessData.R   ┡━━━━━━╇━━━━━╇━━━━━━━┩      *
+*  .------.                     v            .---> │ 2015 │  1  │ -15°C │ ---. *
+* /------/|                                 |      ├──────┼─────┼───────┤     |*
+*+------+/|                 .--------.      |      │ 2015 │  2  │ -16°C │     |*
+*|      +/|                 | >      |      |      ├──────┼─────┼───────┤     |*
+*| NASA +/|                 |        | ----'          ⋮      ⋮      ⋮         |*
+*|      +/                  +--------+             ├──────┼─────┼───────┤     |*
+*'------'                  //.::::::.\\            │ 2100 │ 365 │  -8°C │     |*
+*NEX-GDPP                 '------------'           └──────┴─────┴───────┘     |*
+*Database                    Computer               Climatic projections      |*
+*                                                                             |*
+*                                                                             |*
+*                                                                             |*
+*                                                                             |*
+*      .------------------------.                  .------------.             |*
+*     |         /`-,_            |                |   ▲    .     |            |*
+*     |        ∕_,.._`:          |       ④        |   ┊  ./:.    |     ③      |*
+*     |    ,.-'  ,   ``-:_,-')   |   seriesRun.R  |   ┊. /.      |  convert.R |*
+* .-- |   : 0 ):';       _  {    | <------------- |   ┊:/  .     | <---------' *
+*|    |    `-,_ `'__,.-''\`-.)   |   utilities.R  |   └'┄┄┄┄┄▶   |             *
+*|    |        `\\  ⎝,.-'``      |                | Air to water |             *
+*|    |                          |                | temperature  |             *
+*|    | Young-of-year fish model |                | conversion   |             *
+*|     '------------------------'                  '------------'              *
+*|                                                                             *
+*|                                                                             *
+*|                                                                             *
+*|                                                                             *
+*|                                                                             *
+*|       ┏━━━━━━┳━━━━━━━━━━━┳   ┳━━━━━━━━━━┓            ⑤        +------------+*
+*|     ⎧ ┃ Year ┃ 1st Spawn ┃ ⋯ ┃ Survival ┃        plotting.R   |  Plots &   |*
+*|     │ ┡━━━━━━╇━━━━━━━━━━━╇   ╇━━━━━━━━━━┩     .-------------> |  Graphics  |*
+*|     │ │ 2015 │  day 181  │ ⋯ │    33%   │    |  timelines.R   +------------+*
+*|     │ ├──────┼───────────┼   ┼──────────┤    |                              *
+* '--> ⎨ │ 2016 │  day 177  │ ⋯ │    32%   │ ---+                              *
+*      │ ├──────┼───────────┼   ┼──────────┤    |                              *
+*      │     ⋮        ⋮               ⋮         |                +------------+*
+*      │ ├──────┼───────────┼   ┼──────────┤     '-------------> | Summaries  |*
+*      ⎩ │ 2099 │  day 146  │ ⋯ │    80%   │       summarize.R   | of results |*
+*        └──────┴───────────┴   ┴──────────┘            ⑥        +------------+*
+*         Results — annual outcomes for YOY                                    *
+*                                                                              *
+*                                                                              *                
+********************************************************************************
+
+Process
+--------------------------------------------------------------------------------
+
+0. Check that you have all scripts listed below in the current working
+   directory, and a `/data` subdirectory with the 4 baseline data sets.
+
+1. Run shell script `acquireData.sh` to download GCM data from NASA.
+
+2. Run `accessData.R` to read, format, and output GCM data for analysis.
+
+3. `convert.R`
+
+4. Run `seriesRun.R`, which loads the core functions in `utilities.R`, 
+   to run the model. Annual results are averaged and reshaped before export.
+
+5. Run `plotting.R` to plot results, which also calls `timelines.R` to plot 
+   a complicated timeline plot. This script first calls `seriesRun.R` and 
+   runs the entire model to use the entire range of raw data for plotting.
+
+6. Run `summarize.R` for analysis of all the averaged annual results.
+
+7. ??? 
+
+8. Profit!
+
+
+To do list
+--------------------------------------------------------------------------------
+
+- [ ] add a process step for air to water temperature model `convert.R`
+
+- [ ] The `timelines.R` code for timeline plot needs to be cleaned up
+
+- [ ] The remaining content of old model file to be extracted into `summarize.R`
+
+
+<style>.md .longTOC, .md .mediumTOC, .md .shortTOC { display: none} </style>
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
