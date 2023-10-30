@@ -4,7 +4,7 @@
 #———————————————————————————————————————————————————————————————————————————————
 
 # run the analyses and load their outputs
-source("./seriesRun.R")
+source("./5. Run model with climate data.R")
 
 # load plotting libraries
 library(ggplot2)
@@ -22,10 +22,10 @@ y2050s <- future[[2]]$year %in% 2040:2050
 y2100s <- future[[2]]$year %in% 2090:2099
 
 # make a folder for graphical outputs if one doesn't already exist 
-if (dir.exists("graphics")) {
+if (dir.exists("../graphics")) {
     cat("/graphics directory ready to receive")
 } else {
-    dir.create("graphics")
+    dir.create("../graphics")
     cat("/graphics directory created")
 }
 
@@ -33,7 +33,7 @@ if (dir.exists("graphics")) {
 
 # source the script to create the timelines plot,
 # the routine for which is contained in its own script due to complexity
-source("./timelines.R")
+source("./7. Produce timelines graphic.R")
 
 #———————————————————————————————————————————————————————————————————————————————
 
@@ -312,11 +312,11 @@ all4 <- plot_grid(nipP, genP, louP, vermP,
 outPlot <- grid.arrange(arrangeGrob(all4, left = y.grob, bottom = x.grob))
 
 # save plot
-ggsave(plot = outPlot, filename = "all4.png", path = "./graphics", bg = "white", width = 9, height = 6)
+ggsave(plot = outPlot, filename = "all4.png", path = "../graphics", bg = "white", width = 9, height = 6)
 
 
 # as EPS
-#ggsave(plot = outPlot, filename = "all4.eps", path = "./graphics", device = cairo_ps, bg = "white", width = 9, height = 6, fallback_resolution = 600)
+#ggsave(plot = outPlot, filename = "all4.eps", path = "../graphics", device = cairo_ps, bg = "white", width = 9, height = 6, fallback_resolution = 600)
 
 
 #  ---- Spawn date and last effective spawn density plot -----------------------
@@ -419,10 +419,10 @@ all4 <- plot_grid(nipP, louP, genP, vermP,
 outPlot <- grid.arrange(arrangeGrob(all4, left = y.grob, bottom = x.grob))
 
 # save plot
-ggsave(plot = outPlot, filename = "allBday.png", path = "./graphics", bg = "white", width = 6, height = 9)
+ggsave(plot = outPlot, filename = "allBday.png", path = "../graphics", bg = "white", width = 6, height = 9)
 
 # as EPS
-#ggsave(plot = outPlot, filename = "allBday.eps", path = "./graphics", device = cairo_ps, bg = "white", width = 6, height = 9, fallback_resolution = 600)
+#ggsave(plot = outPlot, filename = "allBday.eps", path = "../graphics", device = cairo_ps, bg = "white", width = 6, height = 9, fallback_resolution = 600)
 
 
 #  ---- Percent cohort survival plot --------------------------------
@@ -471,7 +471,7 @@ surPlot <- ggplot(perSpaSurv, aes(x = year, y = percent, color = type, shape = t
            guides(color = guide_legend(override.aes = list(size = 3)))
 
 # save plot
-ggsave(plot = surPlot, filename = "allSur4.png", path = "./graphics", bg = "white", width = 5, height = 6)
+ggsave(plot = surPlot, filename = "allSur4.png", path = "../graphics", bg = "white", width = 5, height = 6)
 
 # as eps
-#ggsave(plot = surPlot, filename = "allSur4.eps", path = "./graphics", device = cairo_ps, bg = "white", width = 5, height = 6, fallback_resolution = 600)
+#ggsave(plot = surPlot, filename = "allSur4.eps", path = "../graphics", device = cairo_ps, bg = "white", width = 5, height = 6, fallback_resolution = 600)

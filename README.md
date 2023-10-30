@@ -35,7 +35,7 @@ potential invasion.
 Process
 --------------------------------------------------------------------------------
 
-![Schematic of steps in process](https://github.com/deanerik/bottleneck/blob/main/schematic.png?raw=true)
+![Schematic of steps in process](https://github.com/deanerik/bottleneck/blob/main/graphics/schematic.png?raw=true)
 
 0. Check that you have all scripts listed below in the current working
    directory, and a `/data` subdirectory with the 4 baseline data sets.

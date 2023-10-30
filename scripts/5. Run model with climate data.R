@@ -3,7 +3,7 @@
 # Loading and processing temperature series data
 
 # load the necessary functions to run analyses
-source("./utilities.R") 
+source("./4. Young-of-year fish model functions.R") 
 
 # prevent outputs from being in scientific notation
 options(scipen = 100, digits = 4)
@@ -12,10 +12,10 @@ options(scipen = 100, digits = 4)
 #---- 1. Run model on baseline data --------------------------------------------
 
 # load historical water temperature data from Jones et al. 2017
-g.temp <- read.csv("data/gBaseline.csv")
-n.temp <- read.csv("data/nBaseline.csv")
-s.temp <- read.csv("data/sBaseline.csv")
-v.temp <- read.csv("data/vBaseline.csv")
+g.temp <- read.csv("../data/gBaseline.csv")
+n.temp <- read.csv("../data/nBaseline.csv")
+s.temp <- read.csv("../data/sBaseline.csv")
+v.temp <- read.csv("../data/vBaseline.csv")
  
 # package all the baseline results together
 baseline <- list(genesee    = get.results(g.temp),
@@ -74,11 +74,11 @@ mod.temp2 <- function(x){
 #——————————————————————————————————————————————————————————————————————————
 
 # read data from each climate model 
- ec <- read.csv("data/ecEarth3.csv")
-had <- read.csv("data/hadGEM3.csv")
-inm <- read.csv("data/inmCM5.csv")
-mri <- read.csv("data/mriESM2.csv")
-uk  <- read.csv("data/ukESM1.csv")
+ ec <- read.csv("../data/ecEarth3.csv")
+had <- read.csv("../data/hadGEM3.csv")
+inm <- read.csv("../data/inmCM5.csv")
+mri <- read.csv("../data/mriESM2.csv")
+uk  <- read.csv("../data/ukESM1.csv")
 
 # convert negative air temperatures in all GCM datasets 
  ec <- zeroAir( ec)
@@ -232,5 +232,5 @@ names(baselineOutput)[4] <- "tributary"
 names(futureOutput)[4] <- "tributary"
 
 # export both sets of results
-write.csv(baselineOutput, "data/baseline.csv", row.names = FALSE)
-write.csv(futureOutput,  "data/future.csv", row.names = FALSE)
+write.csv(baselineOutput, "../data/baseline.csv", row.names = FALSE)
+write.csv(futureOutput,   "../data/future.csv", row.names = FALSE)

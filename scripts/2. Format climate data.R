@@ -71,7 +71,7 @@ addLeap <- function(temp.vector){
 for (name in modelnames) {
 
     # get their directory name
-    folder <- paste0("data/",name,"/")
+    folder <- paste0("../data/",name,"/")
 
     # combine filenames and directories for paths to access files  
     filepaths  <- lapply(filenames, function(x){paste0(folder,x)})
@@ -152,6 +152,6 @@ for (name in modelnames) {
                     nip = modDat[[4]]$temp)
 
     # write it to csv
-    write.csv(output, paste0("data/",name,".csv"), row.names = FALSE)
+    write.csv(output, paste0("../data/",name,".csv"), row.names = FALSE)
 
 }
