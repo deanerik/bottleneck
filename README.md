@@ -61,7 +61,8 @@ Process
 
 8. Profit!
 
-![Schematic of steps in process](https://github.com/deanerik/bottleneck/blob/main/graphics/schematic.png?raw=true)
+![Schematic of steps in process](https://github.com/deanerik/bottleneck/blob/main/graphics/lightSchematic.png?raw=true#gh-light-mode-only)
+![Schematic of steps in process](https://github.com/deanerik/bottleneck/blob/main/graphics/darkSchematic.png?raw=true#gh-dark-mode-only)
 
 To do list
 --------------------------------------------------------------------------------
