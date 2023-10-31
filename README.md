@@ -35,7 +35,7 @@ potential invasion.
 Process
 --------------------------------------------------------------------------------
 
-![Schematic of steps in process](https://github.com/deanerik/bottleneck/blob/main/graphics/schematic.png?raw=true)
+![Driver script in action](https://github.com/deanerik/bottleneck/blob/main/graphics/demo.gif?raw=true)
 
 0. Check that you have all scripts listed below in the current working
    directory, and a `/data` subdirectory with the 4 baseline data sets.
@@ -59,6 +59,7 @@ Process
 
 8. Profit!
 
+![Schematic of steps in process](https://github.com/deanerik/bottleneck/blob/main/graphics/schematic.png?raw=true)
 
 To do list
 --------------------------------------------------------------------------------
