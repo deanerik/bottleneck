@@ -35,7 +35,9 @@ potential invasion.
 Process
 --------------------------------------------------------------------------------
 
-![Driver script in action](https://github.com/deanerik/bottleneck/blob/main/graphics/demo.gif?raw=true)
+<p align="center">
+  <img src="https://github.com/deanerik/bottleneck/blob/main/graphics/demo.gif?raw=true">
+</p>
 
 0. Check that you have all scripts listed below in the current working
    directory, and a `/data` subdirectory with the 4 baseline data sets.
