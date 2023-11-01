@@ -1,7 +1,12 @@
-# Core functions and utilities
-# Erik Dean 2023
+#!/usr/bin/env Rscript
 
-#——————————————————————————————————————————————————————————————————————————
+# 4. Young-of-year fish model functions.R
+#    Copyright © 2023 Erik K Dean 
+#    Licence: GNU GPLv3 - see LICENSE.txt for more details
+
+# Core functions and utilities
+
+#———————————————————————————————————————————————————————————————————————————————
 
 # juliGreg      →  gregorian date from julian / ordinal date
 # joGrow        →  daily growth increment from temperature
@@ -18,7 +23,7 @@
 
 # get.results   ☞  cohort sizes and overwinter survival outcomes for all years
 
-# ---- Settings — scandalously global variables to direct all analyses ------
+# ---- Settings — scandalously global variables to direct all analyses ----
 
 library(magrittr)
 
@@ -28,7 +33,7 @@ baseTemp   <- 15
 spawnTemp  <- 18
 winterTemp <- 10
 
-# ---- Cohort Data — all possible fish sizes by onset of winter -----------
+# ---- Cohort Data — all possible fish sizes by onset of winter ----
 
 # Julilan date to gregorian conversion
 # ** takes format DDD, YY **
@@ -163,7 +168,7 @@ get.cohort <- function(tempArray){
     return(output)
 }
 
-# ---- Winter data: temperature series for seasons of variable duration -------
+# ---- Winter data: temperature series for seasons of variable duration ----
 
 # Tool to grab the range of days that qualify for a given winter 
 # (starting from the end of one calendar year, crossing through to the start of another)
@@ -285,7 +290,7 @@ get.winter <- function(tempSeries){
 
 }
 
-# ---- overwinter survival outcomes ---------------------------------------------------
+# ---- Overwinter survival outcomes ----
  
 # shuter 1980 for alpha, which changes with temperature
 alpha <- function(temperature){(0.6 * 10^-7)*2 ^ ((temperature-5)/10)}
@@ -393,7 +398,7 @@ get.outcome <- function(sizeArray, winterArray){
     return(output)
 }
 
-# ---- Running the entire model ---------------------------------------------------
+# ---- Running the entire model ----
 
 # takes dataframe columns: ordinal / temp / year
 get.results <- function(temperatureData){

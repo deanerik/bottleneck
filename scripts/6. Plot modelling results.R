@@ -1,6 +1,11 @@
-# plotting.R
-# Erik Dean 2023
+#!/usr/bin/env Rscript
+
+# 6. Plot modelling results.R
+#    Copyright © 2023 Erik K Dean 
+#    Licence: GNU GPLv3 - see LICENSE.txt for more details
+
 # Plotting results from the first year of life simulations
+ 
 #———————————————————————————————————————————————————————————————————————————————
 
 # run the analyses and load their outputs

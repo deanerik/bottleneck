@@ -1,8 +1,15 @@
+#!/usr/bin/env Rscript
+
+# 7. Produce timelines graphic.R
+#    Copyright © 2023 Erik K Dean 
+#    Licence: GNU GPLv3 - see LICENSE.txt for more details
+
 # THIS NEEDS CLEANIN UP
  
-# timelines.R 
-# Erik Dean 2023
 # for plotting results and overarching trends as a timeline 
+ 
+#———————————————————————————————————————————————————————————————————————————————
+
 
 # ---- FOR THE SCHEMATIC -------------------------------------------------------
 

@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
-# 0. Execute project modules.sh
-# Erik Dean 2023
  
-# This script can be used to runs all the scripts in this project,
-# or a only subset of them to either 
-# 1. download and process climate projection data
-# 2. model young-of-year overwinter survival and output results
+# 0. Execute project modules.sh
+#    Copyright © 2023 Erik K Dean 
+#    Licence: GNU GPLv3 - see LICENSE.txt for more details
+ 
+# This script can be used to runs all the scripts in this project
+# or a only subset of them to either:
+#    1. download and process climate projection data
+#    2. model young-of-year overwinter survival and output results
 
 # ——————————————————————————————————————————————————————————————————————————————
 

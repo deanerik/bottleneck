@@ -1,6 +1,12 @@
-# seriesRun.R
-# Erik K Dean 2023
+#!/usr/bin/env Rscript
+
+# 5. Run model with climate data.R
+#    Copyright © 2023 Erik K Dean 
+#    Licence: GNU GPLv3 - see LICENSE.txt for more details
+
 # Loading and processing temperature series data
+
+#———————————————————————————————————————————————————————————————————————————————
 
 # load the necessary functions to run analyses
 source("./4. Young-of-year fish model functions.R") 

@@ -1,6 +1,12 @@
-#!/bin/bash
-# acquireGCM.sh
-# Erik Dean 2023
+#!/usr/bin/env bash
+
+# 1. Download climate data.R 
+#    Copyright © 2023 Erik K Dean 
+#    Licence: GNU GPLv3 - see LICENSE.txt for more details
+
+# Description 
+ 
+#———————————————————————————————————————————————————————————————————————————————
 
 # PURPOSE
 # ------------------------------------------------------------------------------

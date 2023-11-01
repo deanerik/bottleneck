@@ -1,6 +1,12 @@
-# analyzeResults.R
-# Erik Dean 2023
+#!/usr/bin/env Rscript
+
+# 8. Summarize and report results.R
+#    Copyright © 2023 Erik K Dean 
+#    Licence: GNU GPLv3 - see LICENSE.txt for more details
+
 # digging through the results data to make sense of it all
+ 
+#———————————————————————————————————————————————————————————————————————————————
 
 # ---- Loading saved results data ----------------------------------------------
 

@@ -1,6 +1,14 @@
-# accessData.R
-# Erik Dean 2023
-# ————————————————————————————————————————————————
+#!/usr/bin/env Rscript
+
+# 2. Format climate data.R
+#    Copyright © 2023 Erik K Dean 
+#    Licence: GNU GPLv3 - see LICENSE.txt for more details
+ 
+# Description 
+ 
+#———————————————————————————————————————————————————————————————————————————————
+
+
 # Access the netCDF files containing NASA GCM data 
 # and repackage them for use in R.
 # This script should be run after acquireData.sh 
